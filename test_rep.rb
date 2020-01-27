@@ -60,6 +60,14 @@ class ReadPrintTests < Test::Unit::TestCase
 		assert_equal "(+ 2 (* 3 4))", read_print("( + 2 (* 3 4) )")
 	end
 
+	def test10
+		assert_equal "\"abc\"", read_print("\"abc\"")
+	end
+
+	def test11
+		assert_equal "\"abc\"", read_print("      \"abc\"")
+	end
+
 end
 
 class EvalTests < Test::Unit::TestCase
